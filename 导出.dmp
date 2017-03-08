@@ -1,0 +1,149 @@
+--------------------------------------------------------
+--  文件已创建 - 星期二-十二月-27-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table SCORE
+--------------------------------------------------------
+
+  CREATE TABLE "C##ZCM"."SCORE" 
+   (	"NUM" CHAR(20 BYTE), 
+	"NAMES" CHAR(10 BYTE), 
+	"SOUR" CHAR(10 BYTE), 
+	"SCOR" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table CLASSES
+--------------------------------------------------------
+
+  CREATE TABLE "C##ZCM"."CLASSES" 
+   (	"SOUNAME" CHAR(20 BYTE), 
+	"STUTIME" NUMBER(3,0), 
+	"STUPOINT" NUMBER(3,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Table STUDENT
+--------------------------------------------------------
+
+  CREATE TABLE "C##ZCM"."STUDENT" 
+   (	"SNO" CHAR(20 BYTE), 
+	"SNAME" CHAR(10 BYTE), 
+	"SEX" CHAR(3 BYTE), 
+	"SCSSJ" DATE, 
+	"SOURCES" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+REM INSERTING into C##ZCM.SCORE
+SET DEFINE OFF;
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('14                  ','ouyang    ','5         ',100);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('16                  ','yang      ','3         ',83);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('17                  ','zhu       ','3         ',30);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('20                  ','li        ','5         ',92);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('19                  ','luo       ','5         ',92);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('13                  ','zhang     ','5         ',95);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('4                   ','deng      ','math      ',90);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('5                   ','liu       ','chinese   ',85);
+Insert into C##ZCM.SCORE (NUM,NAMES,SOUR,SCOR) values ('6                   ','zhang     ','math      ',100);
+REM INSERTING into C##ZCM.CLASSES
+SET DEFINE OFF;
+Insert into C##ZCM.CLASSES (SOUNAME,STUTIME,STUPOINT) values ('jsj                 ',56,3);
+Insert into C##ZCM.CLASSES (SOUNAME,STUTIME,STUPOINT) values ('orcale              ',50,2);
+Insert into C##ZCM.CLASSES (SOUNAME,STUTIME,STUPOINT) values ('math                ',70,4);
+Insert into C##ZCM.CLASSES (SOUNAME,STUTIME,STUPOINT) values ('chinese             ',60,4);
+Insert into C##ZCM.CLASSES (SOUNAME,STUTIME,STUPOINT) values ('ch                  ',1,1);
+REM INSERTING into C##ZCM.STUDENT
+SET DEFINE OFF;
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('11                  ','nana      ','w  ',to_date('25-12月-95','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('12                  ','ouyang    ','w  ',to_date('25-12月-95','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('14                  ','liu       ','mm ',to_date('25-12月-95','DD-MON-RR'),5);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('10                  ','ouyang    ','ww ',to_date('25-12月-95','DD-MON-RR'),4);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('16                  ','yang      ','ww ',to_date('25-12月-95','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('17                  ','zhu       ','mm ',to_date('25-12月-95','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('20                  ','li        ','man',to_date('25-12月-95','DD-MON-RR'),5);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('7                   ','zhu       ','mm ',to_date('25-12月-95','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('8                   ','ouyang    ','w  ',to_date('25-10月-92','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('9                   ','wu        ','w  ',to_date('15-3月 -92','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('19                  ','luo       ','man',to_date('25-12月-95','DD-MON-RR'),5);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('13                  ','zhang     ','man',to_date('25-12月-95','DD-MON-RR'),5);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('4                   ','deng      ','w  ',to_date('12-11月-25','DD-MON-RR'),1);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('5                   ','liu       ','m  ',to_date('12-2月 -25','DD-MON-RR'),3);
+Insert into C##ZCM.STUDENT (SNO,SNAME,SEX,SCSSJ,SOURCES) values ('6                   ','zhang     ','w  ',to_date('25-12月-16','DD-MON-RR'),5);
+--------------------------------------------------------
+--  DDL for Index SYS_C0010040
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ZCM"."SYS_C0010040" ON "C##ZCM"."SCORE" ("NUM") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0010020
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ZCM"."SYS_C0010020" ON "C##ZCM"."CLASSES" ("SOUNAME") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  DDL for Index SYS_C0010038
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "C##ZCM"."SYS_C0010038" ON "C##ZCM"."STUDENT" ("SNO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
+--  Constraints for Table SCORE
+--------------------------------------------------------
+
+  ALTER TABLE "C##ZCM"."SCORE" ADD PRIMARY KEY ("NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "C##ZCM"."SCORE" MODIFY ("NUM" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table CLASSES
+--------------------------------------------------------
+
+  ALTER TABLE "C##ZCM"."CLASSES" ADD PRIMARY KEY ("SOUNAME")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "C##ZCM"."CLASSES" MODIFY ("SOUNAME" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Constraints for Table STUDENT
+--------------------------------------------------------
+
+  ALTER TABLE "C##ZCM"."STUDENT" ADD PRIMARY KEY ("SNO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "C##ZCM"."STUDENT" MODIFY ("SNO" NOT NULL ENABLE);
